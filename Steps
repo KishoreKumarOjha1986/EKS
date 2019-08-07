@@ -1,0 +1,32 @@
+1. Create 2 IAM Policies
+ 1.1. EKS Full Access
+ 1.2. Administartor access
+
+2. Create 1 IAM Role with trusted entities as EKS with 2 AWS Managed Policies:
+ 2.1.AmazonEKSClusterPolicy
+ 2.2.AmazonEKSServicePolicy
+
+3. User management:
+User-1:
+ClusterAdmin
+- EKS admin Policy
+- k8s admin "system:admin" group
+- Admin EKS Policy
+- Admin CFN Policy
+- Admin EKS Service Policy
+- Admin EKS Cluster Policy
+
+User-2:
+ClusterUser:
+- no IAM Policies
+- k8s admin "system:admin" group
+
+For both usres, create programmatic credentials, and for the admin user, create password
+Logout off the root account and login as ClusterAdmin in the console.
+
+4. Availability of EKS:
+us-east-1
+us-west-2
+eu-west-1
+
+Take the sample template and deploy or create your own
