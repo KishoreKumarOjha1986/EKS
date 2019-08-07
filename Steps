@@ -24,9 +24,9 @@ ClusterUser:
 For both usres, create programmatic credentials, and for the admin user, create password
 Logout off the root account and login as ClusterAdmin in the console.
 
-4. Availability of EKS:
+4. Build the EKS VPC Stack
+Availability of EKS:
 us-east-1
 us-west-2
 eu-west-1
-
 Take the sample template and deploy or create your own
